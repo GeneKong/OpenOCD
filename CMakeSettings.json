@@ -1,0 +1,42 @@
+{
+  // 请参阅 https://go.microsoft.com//fwlink//?linkid=834763 了解有关此文件的详细信息。
+  "environments": [
+    {
+      "MINGW_PREFIX": "D:/MinGW",
+      "MINGW_CHOST ": "i686-w64-mingw32",
+      "MINGW_PACKAGE_PREFIX": "mingw-w64-i686",
+      "MSYSTEM": "MINGW32",
+      "MSYSTEM_CARCH": "i686",
+      "MSYSTEM_PREFIX": "${env.MINGW_PREFIX}",
+      "SHELL": "${env.MINGW_PREFIX}/msys/1.0/bin",
+      //"TEMP": "${env.MINGW_PREFIX}/../tmp",
+      "TMP": "${env.TEMP}",
+      "PATH": "${env.MINGW_PREFIX}/bin;${env.MINGW_PREFIX}/msys/1.0/bin;${env.MINGW_PREFIX}/i686-w64-mingw32/bin;${env.PATH}",
+      "INCLUDE": "${env.MINGW_PREFIX}/include;${env.MINGW_PREFIX}/mingw/include"
+    }
+  ],
+  "configurations": [
+    {
+      "name": "x86-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "MINGW32" ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": ""
+    },
+    {
+      "name": "x86-Release",
+      "generator": "Ninja",
+      "configurationType": "RelWithDebInfo",
+      "inheritEnvironments": [ "MINGW32" ],
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "-v",
+      "ctestCommandArgs": ""
+    }
+  ]
+}
