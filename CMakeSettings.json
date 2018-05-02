@@ -9,7 +9,7 @@
       "MSYSTEM_CARCH": "i686",
       "MSYSTEM_PREFIX": "${env.MINGW_PREFIX}",
       "SHELL": "${env.MINGW_PREFIX}/msys/1.0/bin",
-      //"TEMP": "${env.MINGW_PREFIX}/../tmp",
+      "TEMP": "${env.MINGW_PREFIX}/../Temp",
       "TMP": "${env.TEMP}",
       "PATH": "${env.MINGW_PREFIX}/bin;${env.MINGW_PREFIX}/msys/1.0/bin;${env.MINGW_PREFIX}/i686-w64-mingw32/bin;${env.PATH}",
       "INCLUDE": "${env.MINGW_PREFIX}/include;${env.MINGW_PREFIX}/mingw/include"
@@ -21,8 +21,8 @@
       "generator": "Ninja",
       "configurationType": "Debug",
       "inheritEnvironments": [ "MINGW32" ],
-      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
-      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "buildRoot": "${projectDir}\\CMakeBuilds\\openocd\\build\\${name}",
+      "installRoot": "${projectDir}\\CMakeBuilds\\openocd\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""
@@ -32,8 +32,8 @@
       "generator": "Ninja",
       "configurationType": "RelWithDebInfo",
       "inheritEnvironments": [ "MINGW32" ],
-      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\build\\${name}",
-      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\${workspaceHash}\\install\\${name}",
+      "buildRoot": "${env.USERPROFILE}\\CMakeBuilds\\openocd\\build\\${name}",
+      "installRoot": "${env.USERPROFILE}\\CMakeBuilds\\openocd\\install\\${name}",
       "cmakeCommandArgs": "",
       "buildCommandArgs": "-v",
       "ctestCommandArgs": ""

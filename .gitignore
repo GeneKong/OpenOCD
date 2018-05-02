@@ -108,3 +108,5 @@ VisualGDBCache
 *.vgdbcmake
 VisualGDB
 toolchain.cmake
+CMakeFiles
+/eclipse-project/.metadata
